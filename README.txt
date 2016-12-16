@@ -1,0 +1,1 @@
+delete the columns in NO2DATA.txt without the timestamp, otherwise the R scripts would not work well
