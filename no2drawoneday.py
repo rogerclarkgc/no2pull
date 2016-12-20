@@ -8,7 +8,7 @@ from matplotlib import pyplot as plt
 
 def drawOneDay(filename, period):
     now = datetime.now()
-    str_now = now.strftime('%Y-%m-%d')
+    #str_now = now.strftime('%Y-%m-%d')
     data = open(filename, "r+")
     location = ["奥体中心", "昌平镇", "定陵", "东四", "古城", "官园", "海淀区万柳",
             "怀柔镇", "农展馆", "顺义新城", "天坛", "万寿西宫", "None"]
@@ -25,7 +25,7 @@ def drawOneDay(filename, period):
 
     count = 1
     for loc in location:
-        tablename = loc + str_now + ".txt"
+        tablename = TXTPATH + loc + period + ".txt"
         loc_data = open(tablename, "r+")
         loc_alllines = loc_data.readlines()
         loc_data.close()
